@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Science Quest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🔬 Science Quest</h1>
+
+    <!-- Topic menu -->
+    <section id="menu">
+      <p class="subtitle">Pick a topic and test your science brain!</p>
+      <div class="topics" id="topics"></div>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="game" hidden>
+      <div class="stats">
+        <span>Question <b id="question-number">1</b>/<b id="question-total">10</b></span>
+        <span>⭐ Score: <b id="score">0</b></span>
+      </div>
+
+      <!-- 20-second timer -->
+      <div class="timer" aria-hidden="true"><div class="timer-bar" id="timer-bar"></div></div>
+      <div class="time-text">⏱️ <b id="time-left">20</b> seconds</div>
+
+      <div class="emoji" id="emoji"></div>
+      <h2 id="question"></h2>
+      <button id="listen" class="listen">🔊 Listen</button>
+
+      <div class="choices" id="choices"></div>
+
+      <div id="fact" class="fact" hidden></div>
+      <button id="next" class="primary" hidden>Next ➡</button>
+    </section>
+
+    <!-- Result screen -->
+    <section id="end" hidden></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

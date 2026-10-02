@@ -1,0 +1,146 @@
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ---------- Card ---------- */
+.card {
+  width: 94%;
+  max-width: 520px;
+  margin: 16px 0;
+  padding: 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 { margin: 0 0 8px; color: #0984e3; }
+h2 { margin: 8px 0 12px; font-size: 26px; color: #2d3436; }
+.subtitle { margin: 0 0 16px; color: #636e72; }
+
+/* ---------- Topic menu ---------- */
+.topics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.topics button {
+  padding: 18px 8px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 18px;
+  transition: transform 0.1s;
+}
+
+.topics button:hover { transform: scale(1.05); }
+.topics button span { display: block; font-size: 40px; }
+.topics button.mix { grid-column: 1 / -1; }
+
+/* ---------- Quiz ---------- */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.emoji { font-size: 80px; margin: 8px 0; }
+
+.listen {
+  padding: 6px 14px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  background: #dfe6e9;
+  border-radius: 12px;
+}
+
+.choices {
+  display: grid;
+  gap: 10px;
+}
+
+.choices button {
+  padding: 14px;
+  font-size: 22px;
+  color: #2d3436;
+  background: #ffeaa7;
+  border-radius: 16px;
+  transition: transform 0.1s;
+}
+
+.choices button:hover:not(:disabled) { transform: scale(1.03); }
+.choices button.right { background: #55efc4; }
+.choices button.wrong { background: #ff7675; }
+
+/* ---------- Timer ---------- */
+.timer {
+  height: 14px;
+  margin-top: 12px;
+  overflow: hidden;
+  background: #dfe6e9;
+  border-radius: 8px;
+}
+
+.timer-bar {
+  width: 100%;
+  height: 100%;
+  background: #00b894;
+  border-radius: 8px;
+  transition: width 1s linear, background 0.3s;
+}
+
+.timer-bar.warning { background: #fdcb6e; }
+.timer-bar.danger  { background: #d63031; }
+
+.time-text {
+  margin-top: 4px;
+  font-size: 16px;
+  color: #636e72;
+}
+
+.time-text.danger { color: #d63031; font-weight: bold; }
+
+/* ---------- Fun fact ---------- */
+.fact {
+  margin-top: 16px;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 18px;
+  background: #dff9fb;
+  border-left: 6px solid #0984e3;
+  border-radius: 12px;
+}
+
+.primary {
+  margin-top: 16px;
+  padding: 12px 28px;
+  font-size: 22px;
+  color: #fff;
+  background: #6c5ce7;
+  border-radius: 16px;
+}
+
+/* ---------- Result screen ---------- */
+.end-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.end-buttons .primary { margin-top: 12px; }
